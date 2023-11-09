@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class Test_123 {
     public static void main(String[] args) {
-        int n = 10;
+    int n = 10;
         List<Integer> tempList = new ArrayList<>();
         tempList.add(n);
         while (n != 1) {
