@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 /**
  * 수열과 구간 쿼리 1
  * 문제 설명
@@ -36,5 +39,14 @@ public class Test_138 {
             }
             return arr;
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 2, 3, 4};
+        int[][] queries = {{0, 1}, {1, 2}, {2, 3}};
+        int[] result = {1, 3, 4, 4, 4};
+
+        Arrays.stream(queries).flatMapToInt(query -> IntStream.rangeClosed(query[0], query[1])).forEach(i -> arr[i] += 1);
+        System.out.println(Arrays.toString(arr));
     }
 }
