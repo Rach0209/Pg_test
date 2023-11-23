@@ -27,12 +27,14 @@
  * 따라서 [1, 3, 4, 4, 4]를 return 합니다.
  */
 public class Test_138 {
-    public int[] solution(int[] arr, int[][] queries) {
-        for (int i = 0; i < queries.length; i++) {
-            for (int j = queries[i][0]; j <= queries[i][1]; j++) {
-                arr[j]++;
+    class Solution {
+        public int[] solution(int[] arr, int[][] queries) {
+            for (int i = 0; i < queries.length; i++) {
+                for (int j = queries[i][0]; j <= queries[i][1]; j++) {
+                    arr[j]++;
+                }
             }
+            return arr;
         }
-        return arr;
     }
 }
